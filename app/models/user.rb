@@ -1,4 +1,5 @@
-Class User < ActiveRecord::Base
+class User < ActiveRecord::Base
   has_secure_password
   validates_presence_of :username, :password, :email
+  has_many :recipes
 end
