@@ -38,4 +38,13 @@ class UserController < ApplicationController
         end
     end
 
+    get 'users/:slug' do
+        @user = User.find_by_slug(param[:slug])
+        if @user
+            erb :'users/show'
+        else
+            redirect 'error'
+        end
+    end
+
 end
