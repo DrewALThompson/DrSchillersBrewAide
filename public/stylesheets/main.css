@@ -11,9 +11,14 @@
     width: 100%;
   }
 
+  img {
+    width: 100%;
+    height: auto;
+  }
+
   body {
     background-color: rgb(89, 197, 107);
-    color: rgb(89, 197, 107);
+    color: rgb(42, 40, 53);
     font-family: Sans-Serif;
     line-height: 18px;
   }
@@ -80,6 +85,16 @@
     margin-top: 20px;
     padding-top: 20px;
   }
+
+  .form-container {
+    width: 500px;
+    clear: both;
+  }
+  
+  .form-container p {
+    width: 100%;
+    clear: both;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -110,5 +125,15 @@
   h2 {
     font-size: 18px;
     line-height: 24px;
+  }
+
+  .form-container {
+    width: 500px;
+    clear: both;
+  }
+  
+  .form-container p {
+    width: 100%;
+    clear: both;
   }
 }

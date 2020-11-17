@@ -1,0 +1,11 @@
+<h1> <%= @user.username %> </h1>
+
+<% @user.recipes.each do |recipe| %>
+  <div class='recipe-container'><h2><%= recipe.name %></h2>
+     <ul>
+       <li>Hops: <%= recipe.hops %>
+       <li>Malt: <%= recipe.malt %>
+       <li>Grain: <%= recipe.grain %>
+       <li>Yeast: <%= recipe.yeast %>
+    </ul>
+</div>

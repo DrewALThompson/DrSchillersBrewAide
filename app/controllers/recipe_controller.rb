@@ -1,6 +1,6 @@
-class RecipeController < ApplicationController
+class RecipesController < ApplicationController
 
-    get '/recipes' do
+    get '/recipes/index' do
         @recipes = Recipe.all 
         erb :'/recipes/index'
     end
