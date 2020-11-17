@@ -19,5 +19,6 @@ class RecipeController < ApplicationController
             redirect '/recipes'
         else
             redirect '/recipes/error'
+        end
     end 
 end
