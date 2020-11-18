@@ -47,4 +47,13 @@ class UsersController < ApplicationController
         end
     end
 
+    get '/logout' do
+        if logged_in?
+            session.clear
+            erb :'index'
+        else
+            redirect '/'
+        end
+    end
+
 end

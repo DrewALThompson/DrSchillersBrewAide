@@ -18,7 +18,7 @@ class RecipesController < ApplicationController
         if @recipe
             redirect '/recipes'
         else
-            redirect '/recipes/error'
+            redirect '/recipes/new'
         end
     end 
 end

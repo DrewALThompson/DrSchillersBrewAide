@@ -15,8 +15,28 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class='navbar'>
+        <a class='home' href='/'>Home</a>
+        <% if !logged_in?%>
+        <a class='log' href='/login'>Login</a>
+        <% else %>
+        <a class='log' href='/users/<%= user.username %>'><%= user.username %></a>
+        <% end %>
+        <a href='/recipes/index'>Recipes</a>
+      </div>
 
         <%= yield %>
+
+    <div class="buttons">
+      <% if logged_in? %>
+
+        <span><a href='/'>-Main Page-     </a><a href='/recipes/new'>     -New Recipe-     </a><a href='/logout'>     -Logout-</a></span>
+
+      <% else %>
+        <span><a href='/'>-Main Page-     </a><a href='/signup'>     -Signup-     </a><a href='/login'>     -Login-</a></span>
+
+        <% end %>
+    </div>
 
       <footer class="branding">
         <small>&copy; 2020 <strong>DrSchillersBrewAide</strong></small>
