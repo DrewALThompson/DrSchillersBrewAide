@@ -22,7 +22,7 @@
         <a class='log' href='/login'>Login</a>
         <a href='/recipes/index'>Recipes</a>
       <% else %>
-        <a class='log' href='/users/<%= @user.username %>'><%= @user.username %></a>
+        <a class='log' href='/users/<%= @user.userslug %>'><%= @user.username %></a>
         <a href='/recipes/index'>Recipes</a>
         <a href='/logout'>Logout</a>
       <% end %>
