@@ -1,7 +1,11 @@
 module Slugify
     module InstanceMethods
-        def slug
-            self.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+        def userslug
+            username.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+        end
+
+        def recipeslug
+            name.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
         end
     end
 

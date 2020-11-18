@@ -16,7 +16,7 @@ class RecipesController < ApplicationController
     post '/recipes/new' do 
         @recipe = Recipe.create(params)
         if @recipe
-            redirect '/recipes'
+            redirect '/recipes/index'
         else
             redirect '/recipes/new'
         end
