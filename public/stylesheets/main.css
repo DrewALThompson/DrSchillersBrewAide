@@ -96,8 +96,7 @@
   }
 }
 
-/* Add a black background color to the top navigation */
-.topnav {
+.navbar {
   background-color: #333;
   overflow: hidden;
 }
@@ -116,7 +115,7 @@
   color: black;
 }
 
-.navbar a.log {
+.navbar a.home {
   background-color: #417db6;
   color: white;
 }
