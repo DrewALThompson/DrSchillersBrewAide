@@ -14,10 +14,10 @@ class ApplicationController < Sinatra::Base
     erb :'index'
   end
 
-  not_found do 
-    status 404
-    erb :'/error'
-  end
+  # not_found do 
+  #   status 404
+  #   erb :'/error'
+  # end
 
   helpers do
     def logged_in?
