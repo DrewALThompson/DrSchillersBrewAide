@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20201115073842) do
     t.string  "malt"
     t.string  "yeast"
     t.string  "grain"
-    t.string  "other_ingredients"
     t.integer "user_id"
   end
 

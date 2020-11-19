@@ -6,8 +6,7 @@ class CreateRecipes < ActiveRecord::Migration
       t.string :malt
       t.string :yeast
       t.string :grain
-      t.string :other_ingredients
-      t.belongs_to :user
+      t.integer :user_id
     end
   end
 end
