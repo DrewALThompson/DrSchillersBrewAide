@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="/stylesheets/main.css" />
   </head>
   <body>
-    <% @user = current_user if logged_in?%>
     <div class='navbar'>
       <a class='home' href='/'>Home</a>
       <% if !logged_in?%>
@@ -22,7 +21,7 @@
         <a class='log' href='/login'>Login</a>
         <a href='/recipes/index'>Recipes</a>
       <% else %>
-        <a class='log' href='/users/<%= @user.userslug %>'><%= @user.username %></a>
+        <a class='log' href='/users/<%= current_user.slug %>'><%= current_user.username %></a>
         <a href='/recipes/index'>Recipes</a>
         <a href='/logout'>Logout</a>
       <% end %>

@@ -1,6 +1,6 @@
-<h1> <%= @userslug.username %> </h1>
+<h1> <%= @slug.username %> </h1>
 
-<% @userslug.recipes.each do |recipe| %>
+<% @slug.recipes.each do |recipe| %>
   <div class='recipe-container'><h2><%= recipe.name %></h2>
      <ul>
        <li>Hops: <%= recipe.hops %>
