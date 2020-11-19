@@ -14,7 +14,10 @@
     </ul>
     <br>
     <br>
-    <h5> Created by <a href='/recipe/<%= recipe.user %><%= recipe.user[:username] %></a> </h5>
+    <h5> <a href='/users/<%= recipe.user.slug %>'>Created by <%= recipe.user.username %></a></h5>
+    <% if recipe.user == current_user%>
+      <h5><span> Edit Recipe | Delete Recipe </span></h5>
+    <% end %>
   </div>  
   <% end%>
 <% end %>   
