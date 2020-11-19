@@ -1,48 +1,47 @@
 <div class='form-container'>
   <form action='/recipes/new' method='post'>
-    <p><label for='name'>Recipe Name:</label>
+    <p><h3>Recipe Name:</h3>
     <input type='text' name='name' id='name'></p>
-    <p><label>Malt:</label><br>
-        <input type="radio" id='Munich Malt' name="malt" value="Munich Malt">
-        <label for="Munich Malt">Munich Malt</label><br>
-        <input type="radio" id="Pilsner Malt" name="malt" value="Pilsner Malt">
-        <label for="Pilsner Malt">Pilsner Malt</label><br>
-        <input type="radio" id="German Vienna Malt" name="malt" value="German Vienna Malt">
-        <label for="German Vienna Malt">German Vienna Malt</label><br>
-    Input your own
+    <p><h3>Malt:</h3>
+        <input type="checkbox" id='malt' name="malt" value="Munich Malt">
+        <label>Munich Malt</label><br>
+        <input type="checkbox" id="malt" name="malt" value="Pilsner Malt">
+        <label>Pilsner Malt</label><br>
+        <input type="checkbox" id="malt]" name="malt" value="German Vienna Malt">
+        <label>German Vienna Malt</label><br>
+    <h4>Input your own</h4>
     <input type='text' name='malt' id='malt'></p>
 
-    <p><label>Hops:</label><br>
-        <input type="radio" id='Strata Hops' name="hops" value="Strata Hops">
-        <label for="Strata Hops">Strata Hops</label><br>
-        <input type="radio" id="Cascade Hops" name="hops" value="Cascade Hops">
-        <label for="Cascade Hops">Cascade Hops</label><br>
-        <input type="radio" id="Mosaic Hops" name="hops" value="Mosaic Hops">
-        <label for="Mosaic Hops">Mosaic Hops</label><br>
-    Input your own
+    <p><h3>Hops:</h3>
+        <input type="checkbox" id='hops]' name="hops]" value="Strata Hops">
+        <label>Strata Hops</label><br>
+        <input type="checkbox" id="hops]" name="hops]" value="Cascade Hops">
+        <label>Cascade Hops</label><br>
+        <input type="checkbox" id="hops]" name="hops]" value="Mosaic Hops">
+        <label>Mosaic Hops</label><br>
+    <h4>Input your own</h4>
     <input type='text' name='hops' id='hops'></p>
 
-    <p><label>Yeast:</label><br>
-        <input type="radio" id='Imperial Yeast A38 Juice' name="yeast" value="Imperial Yeast A38 Juice">
-        <label for="Imperial Yeast A38 Juice">Imperial Yeast A38 Juice</label><br>
-        <input type="radio" id="SafAle S-05" name="yeast" value="SafAle S-05">
-        <label for="SafAle S-05">SafAle S-05</label><br>
-        <input type="radio" id="Wyeast 1272" name="yeast" value="Wyeast 1272">
-        <label for="Wyeast 1272">Wyeast 1272</label><br>
-    Input your own
+    <p><h3>Yeast:</h3>
+        <input type="checkbox" id='yeast]' name="yeast]" value="Imperial Yeast A38 Juice">
+        <label>Imperial Yeast A38 Juice</label><br>
+        <input type="checkbox" id="yeast]" name="yeast]" value="SafAle S-05">
+        <label>SafAle S-05</label><br>
+        <input type="checkbox" id="yeast]" name="yeast]" value="Wyeast 1272">
+        <label>Wyeast 1272</label><br>
+    <h4>Input your own</h4>
     <input type='text' name='yeast' id='yeast'></p>
 
-    <p><label>Grains:</label><br>
-        <input type="radio" id='Rahr 2-Row Malt' name="grain" value="Rahr 2-Row Malt">
-        <label for="Rahr 2-Row Malt">Rahr 2-Row Malt</label><br>
-        <input type="radio" id="Briess Chocolate Malt" name="grain" value="Briess Chocolate Malt">
-        <label for="Briess Chocolate Malt">Briess Chocolate Malt</label><br>
-        <input type="radio" id="Flaked Barley" name="grain" value="Flaked Barley">
-        <label for="Flaked Barley">Flaked Barley</label><br>
-    Input your own
+    <p><h3>Grains:</h3>
+        <input type="checkbox" id='recipe[grain]' name="recipe[grain]" value="Rahr 2-Row Malt">
+        <label>Rahr 2-Row Malt</label><br>
+        <input type="checkbox" id="recipe[grain]" name="recipe[grain]" value="Briess Chocolate Malt">
+        <label>Briess Chocolate Malt</label><br>
+        <input type="checkbox" id="recipe[grain]" name="recipe[grain]" value="Flaked Barley">
+        <label>Flaked Barley</label><br>
+    <h4>Input your own</h4>
     <input type='text' name='grain' id='grain'></p>
-    <%# <p><label>Other Ingredients</label>
-    <input type='text' id='other_ingredients' name='other_ingredients'></p> %>
+    <input type='hidden' name='user_id' id='user_id' value='<%=@current_user.id%>'>
     <input type='submit' value='Submit Recipe'>
   </form>
 </div>
