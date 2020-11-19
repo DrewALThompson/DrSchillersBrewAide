@@ -12,7 +12,9 @@
        <li>Grain: <%= recipe.grain %>
        <li>Yeast: <%= recipe.yeast %>
     </ul>
-    <h5> <%= recipe.user %> </h5>
+    <br>
+    <br>
+    <h5> Created by <a href='/recipe/<%= recipe.user[:username] %><%= recipe.user[:username] %></a> </h5>
   </div>  
   <% end%>
 <% end %>   

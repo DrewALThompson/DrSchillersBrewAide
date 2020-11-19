@@ -15,6 +15,7 @@ class RecipesController < ApplicationController
 
     post '/recipes/new' do 
         @recipe = Recipe.create(params)
+        @recipe.user = @current_user
         if @recipe
             redirect '/recipes/index'
         else
