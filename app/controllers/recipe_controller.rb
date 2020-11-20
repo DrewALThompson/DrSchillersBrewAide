@@ -23,30 +23,26 @@ class RecipesController < ApplicationController
     end 
 
     get '/recipes/:id' do
-      if logged_in?
-        @recipe = Recipe.find_by(id: params[:id])
-        erb :"recipes/show"
-      else
-        redirect to '/login'
-      end
+      @recipe = Recipe.find_by(id: params[:id])
+      erb :"recipes/show"
     end
 
     get '/recipes/:id/edit' do
       @recipe = Recipe.find_by(id: params[:id])
-      if logged_in? && @Recipe.user == current_user
-        erb :"Recipe/edit"
+      if @recipe.user == current_user
+        erb :"recipes/edit"
       else
         redirect to '/login'
       end
     end
     
-    patch '/recipes/:id/edit' do
+    patch '/recipes/:id' do
       @recipe = Recipe.find_by(id: params[:id])
-      @user = current_user
-      if @recipe.update(content: params[:content], user: @user)
+      @recipe.update(name: params[:name], hops: params[:hops], malt: params[:malt], grain: params[:grain], yeast: params[:yeast], user_id: params[:user_id])
+      if @recipe
         redirect to "/recipes/#{@recipe.id}"
       else
-        redirect to "/recipe/#{@recipe.id}/edit"
+        redirect to "/recipes/#{@recipe.id}/edit"
       end
     end
     
