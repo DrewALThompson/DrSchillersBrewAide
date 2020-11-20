@@ -17,7 +17,6 @@
     <h5> <a href='/users/<%= recipe.user.slug %>'>Created by <%= recipe.user.username %></a></h5>
     <% if recipe.user == current_user%>
       <h5><a href='/recipes/<%= recipe.id %>/edit'>Edit Recipe</a></h5>
-      </form>
     <% end %>
   </div>  
   <% end%>
