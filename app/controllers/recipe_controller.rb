@@ -50,12 +50,8 @@ class RecipesController < ApplicationController
       end
     end
     
-    delete '/recipes/:id/delete' do
-      @recipe = current_user.recipes.find_by(:id => params[:id])
-      if @recipe && @recipe.destroy
-        redirect "/recipes/index"
-      else
-        redirect "/recipes/#{@recipe.id}"
-      end
+    delete '/recipes/:id' do
+      Recipe.destroy(params[:id])
+      redirect to '/recipes/index'
     end
 end

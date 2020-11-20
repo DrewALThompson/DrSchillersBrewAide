@@ -1,46 +1,46 @@
 <div class='form-container'>
   <form action='/recipes/new' method='post'>
     <p><h3>Recipe Name:</h3>
-    <input type='text' name='name' id='name'></p>
+    <input type='text' name='name'></p>
     <p><h3>Malt:</h3>
-        <input type="checkbox" id='malt' name="malt" value="Munich Malt">
+        <input type="checkbox" name="malt" value="Munich Malt">
         <label>Munich Malt</label><br>
-        <input type="checkbox" id="malt" name="malt" value="Pilsner Malt">
+        <input type="checkbox" name="malt" value="Pilsner Malt">
         <label>Pilsner Malt</label><br>
-        <input type="checkbox" id="malt" name="malt" value="German Vienna Malt">
+        <input type="checkbox" name="malt" value="German Vienna Malt">
         <label>German Vienna Malt</label><br>
     <h4>Input your own</h4>
-    <input type='text' name='malt' id='malt'></p>
+    <input type='text' name='malt'></p>
 
     <p><h3>Hops:</h3>
-        <input type="checkbox" id='hops' name="hops" value="Strata Hops">
+        <input type="checkbox" name="hops" value="Strata Hops">
         <label>Strata Hops</label><br>
-        <input type="checkbox" id="hops" name="hops" value="Cascade Hops">
+        <input type="checkbox" name="hops" value="Cascade Hops">
         <label>Cascade Hops</label><br>
-        <input type="checkbox" id="hops" name="hops" value="Mosaic Hops">
+        <input type="checkbox" name="hops" value="Mosaic Hops">
         <label>Mosaic Hops</label><br>
     <h4>Input your own</h4>
-    <input type='text' name='hops' id='hops'></p>
+    <input type='text' name='hops'></p>
 
     <p><h3>Yeast:</h3>
-        <input type="checkbox" id='yeast' name="yeast" value="Imperial Yeast A38 Juice">
+        <input type="checkbox" name="yeast" value="Imperial Yeast A38 Juice">
         <label>Imperial Yeast A38 Juice</label><br>
-        <input type="checkbox" id="yeast" name="yeast" value="SafAle S-05">
+        <input type="checkbox" name="yeast" value="SafAle S-05">
         <label>SafAle S-05</label><br>
-        <input type="checkbox" id="yeast" name="yeast" value="Wyeast 1272">
+        <input type="checkbox" name="yeast" value="Wyeast 1272">
         <label>Wyeast 1272</label><br>
     <h4>Input your own</h4>
-    <input type='text' name='yeast' id='yeast'></p>
+    <input type='text' name='yeast'></p>
 
     <p><h3>Grains:</h3>
-        <input type="checkbox" id='grain' name="grain" value="Rahr 2-Row Malt">
+        <input type="checkbox" name="grain" value="Rahr 2-Row Malt">
         <label>Rahr 2-Row Malt</label><br>
-        <input type="checkbox" id="grain" name="grain" value="Briess Chocolate Malt">
+        <input type="checkbox" name="grain" value="Briess Chocolate Malt">
         <label>Briess Chocolate Malt</label><br>
-        <input type="checkbox" id="grain" name="grain" value="Flaked Barley">
+        <input type="checkbox" name="grain" value="Flaked Barley">
         <label>Flaked Barley</label><br>
     <h4>Input your own</h4>
-    <input type='text' name='grain' id='grain'></p>
+    <input type='text' name='grain'></p>
     <input type='hidden' name='user_id' id='user_id' value='<%=@current_user.id%>'>
     <input type='submit' value='Submit Recipe'>
   </form>
