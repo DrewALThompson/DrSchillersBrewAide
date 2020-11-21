@@ -12,9 +12,8 @@
 <h5> <a href='/users/<%= @recipe.user.slug %>'>Created by <%= @recipe.user.username %></a></h5>
 <% if @recipe.user == current_user%>
   <h5><a href='/recipes/<%= @recipe.id %>/edit'>Edit Recipe</a></h5>
-<% end %>
-
-<form method="post" action="/recipes/<%= @recipe.id%>">
+  <form method="post" action="/recipes/<%= @recipe.id%>">
     <input id="hidden" type="hidden" name="_method" value="DELETE">
     <input type="submit" value="Delete">
 </form>
+<% end %>
