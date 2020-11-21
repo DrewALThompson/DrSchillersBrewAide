@@ -7,17 +7,36 @@
     <input type='text' name='name' required></p>
 
     <p><h3>Malt: <%= @recipe.malt %></h3>
-        <input type='text' name='malt' required></p>
+        <input type="radio" name="malt" value="Munich Malt">
+        <label>Munich Malt</label><br>
+        <input type="radio" name="malt" value="Pilsner Malt">
+        <label>Pilsner Malt</label><br>
+        <input type="radio" name="malt" value="German Vienna Malt">
+        <label>German Vienna Malt</label><br>
 
     <p><h3>Hops: <%= @recipe.hops %></h3>
-        <input type='text' name='hops' required></p>
+        <input type="radio" name="hops" value="Strata Hops">
+        <label>Strata Hops</label><br>
+        <input type="radio" name="hops" value="Cascade Hops">
+        <label>Cascade Hops</label><br>
+        <input type="radio" name="hops" value="Mosaic Hops">
+        <label>Mosaic Hops</label><br>
 
     <p><h3>Yeast: <%= @recipe.yeast %></h3>
-        <input type='text' name='yeast' required></p>
+        <input type="radio" name="yeast" value="Imperial Yeast A38 Juice">
+        <label>Imperial Yeast A38 Juice</label><br>
+        <input type="radio" name="yeast" value="SafAle S-05">
+        <label>SafAle S-05</label><br>
+        <input type="radio" name="yeast" value="Wyeast 1272">
+        <label>Wyeast 1272</label><br>
 
     <p><h3>Grains: <%= @recipe.grain %></h3>
-        <input type='text' name='grain' required></p>
-        <br>
+        <input type="radio" name="grain" value="Rahr 2-Row Malt">
+        <label>Rahr 2-Row Malt</label><br>
+        <input type="radio" name="grain" value="Briess Chocolate Malt">
+        <label>Briess Chocolate Malt</label><br>
+        <input type="radio" name="grain" value="Flaked Barley">
+        <label>Flaked Barley</label><br>
 
     <input type='hidden' name='user_id' id='user_id' value='<%=@current_user.id%>'>
     <input type='submit' value='Edit Recipe'>
